@@ -15,7 +15,7 @@ alwaysApply: false
   Dependencies
   - Composer for dependency management
   - PHP 8.3+
-  - Laravel 11.0+
+  - Laravel 12.0+
 
   PHP and Laravel Standards
   - Leverage PHP 8.3+ features when appropriate (e.g., typed properties, match expressions).
@@ -94,4 +94,5 @@ alwaysApply: false
   - Implement API versioning for maintainability and backward compatibility.
   - Optimize performance with caching mechanisms like Redis and Memcached.
   - Ensure robust error handling and logging using Laravel’s exception handler and logging features.
+  - Don't use react, vue or limewire for the views, use blade php
   
