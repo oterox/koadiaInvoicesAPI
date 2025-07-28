@@ -21,7 +21,16 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        \Laravel\Fortify\Fortify::ignoreRoutes();
+        // Register Fortify routes only if we're not in an API request
+        if (!request()->is('api/*')) {
+            Fortify::loginView(function () {
+                return view('auth.login');
+            });
+
+            Fortify::registerView(function () {
+                return view('auth.register');
+            });
+        }
     }
 
     /**
